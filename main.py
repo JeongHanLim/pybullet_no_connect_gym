@@ -4,7 +4,7 @@ import time
 import random
 #env_list = [AntBulletEnv,HalfCheetahBulletEnv, Walker2DBulletEnv, HopperBulletEnv]
 env = Walker2DBulletEnv()
-env.render()
+
 
 state = env.reset()
 # TODO: Before reset, update_power does not work.
