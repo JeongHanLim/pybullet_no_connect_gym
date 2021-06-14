@@ -18,7 +18,7 @@ class HopperBulletEnv(WalkerBaseBulletEnv):
 
 class Walker2DBulletEnv(WalkerBaseBulletEnv):
     foot_list = ["foot_left", "foot_right"]
-    joint_list = ["thigh_joint", "leg_joint", "foot_joint", "thigh_left_joint", "leg_left_joint", "foot_left_joint"]
+    joint_list = ["thigh_left_joint", "leg_left_joint", "foot_left_joint","thigh_joint", "leg_joint", "foot_joint"]
 
     def __init__(self, foot_left=100, foot_right=100, render=False):
         initial_hyper = load_hyperparameters('Walker2DBulletEnv')
