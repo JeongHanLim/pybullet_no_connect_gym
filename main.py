@@ -7,8 +7,8 @@ env = Walker2DBulletEnv()
 env.render()
 
 state = env.reset()
-# Before reset, update_power does not work for now.
-# WIll be fixed immediately
+# TODO: Before reset, update_power does not work for now.
+# TODO: WIll be fixed immediately
 env.update_power(foot_left=130.0, foot_right=1.0)
 joint_power = env.power
 print(joint_power)
