@@ -6,22 +6,27 @@ import random
 env = Walker2DBulletEnv()
 env.render()
 
+state = env.reset()
+# Before reset, update_power does not work for now.
+# WIll be fixed immediately
+env.update_power(foot_left=130.0, foot_right=1.0)
+joint_power = env.power
+print(joint_power)
+
 episode = 0
 rewards = []
 for i in range(1000):
     state = env.reset()
-    env.update_power(foot_left=130.0, foot_right=1.0)
-    sth = env.power
-    print(sth)
-    reward_episode = 0
+    episode_reward = 0
     episode += 1
     while True:
         #action, _ = model.predict(state)
         action = env.action_space.sample()
         ns, rw, done, info = env.step(action)
-        reward_episode+=rw
+        episode_reward+=rw
         if done == True:
-            rewards.append(reward_episode)
+            rewards.append(episode_reward)
+            print(episode_reward)
             break
         time.sleep(0.02)
 
