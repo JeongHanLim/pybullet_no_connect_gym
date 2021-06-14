@@ -4,3 +4,6 @@ pybullet_configurable.egg-info/SOURCES.txt
 pybullet_configurable.egg-info/dependency_links.txt
 pybullet_configurable.egg-info/not-zip-safe
 pybullet_configurable.egg-info/top_level.txt
+pybullet_wrapper/__init__.py
+pybullet_wrapper/env_wrapper.py
+pybullet_wrapper/robot_wrapper.py
