@@ -1,0 +1,8 @@
+{
+    "thigh_joint" : 100,
+    "leg_joint" : 100,
+    "foot_joint" : 100,
+    "thigh_left_joint" : 100,
+    "leg_left_joint" : 100,
+    "foot_left_joint" : 100
+}
