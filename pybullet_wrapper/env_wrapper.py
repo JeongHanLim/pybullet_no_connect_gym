@@ -1,5 +1,5 @@
 from pybullet_envs.gym_locomotion_envs import WalkerBaseBulletEnv
-from wrapper.robot_wrapper import Hopper, Walker2D, HalfCheetah, Ant
+from pybullet_wrapper.robot_wrapper import Hopper, Walker2D, HalfCheetah, Ant
 from load_parameters import load_hyperparameters
 import numpy as np
 
@@ -22,7 +22,7 @@ class Walker2DBulletEnv(WalkerBaseBulletEnv):
 
     def __init__(self, foot_left=100, foot_right=100, render=False):
         initial_hyper = load_hyperparameters('Walker2DBulletEnv')
-        foot_left, foot_right = [initial_hyper[i] for i in Walker2DBulletEnv.foot_list]
+        foot_left, foot_right = initial_hyper["foot_left"], initial_hyper["foot_right"]
         self.robot = Walker2D(foot_left, foot_right)
         WalkerBaseBulletEnv.__init__(self, self.robot, render)
 
@@ -54,16 +54,13 @@ class HalfCheetahBulletEnv(WalkerBaseBulletEnv):
 class AntBulletEnv(WalkerBaseBulletEnv):
     foot_list = ['front_left_foot', 'front_right_foot', 'left_back_foot', 'right_back_foot']
 
-    def __init__(self, front_left_foot=100, front_right_foot=100, left_back_foot=100, right_back_foot=100,
+    def __init__(self, flfoot=100, frfoot=100, lbfoot=100, rbfoot=100,
                  render=False):
         initial_hyper = load_hyperparameters('AntBulletEnv')
-        front_left_foot, front_right_foot, left_back_foot, right_back_foot \
+        flfoot, frfoot, lbfoot, rbfoot \
             = [initial_hyper[i] for i in AntBulletEnv.foot_list]
-        self.robot = Ant(front_left_foot, front_right_foot, left_back_foot, right_back_foot)
+        self.robot = Ant(flfoot, frfoot, lbfoot, rbfoot)
         WalkerBaseBulletEnv.__init__(self, self.robot, render)
 
     def update_power(self, hyperparams):
         self.robot.update_power(hyperparams)
-
-
-6

@@ -1,9 +1,16 @@
-from wrapper.env_wrapper import HalfCheetahBulletEnv, Walker2DBulletEnv, HopperBulletEnv, AntBulletEnv
+from pybullet_wrapper.env_wrapper import HalfCheetahBulletEnv, Walker2DBulletEnv, HopperBulletEnv, AntBulletEnv
 import numpy as np
 import time
 import random
 #env_list = [AntBulletEnv,HalfCheetahBulletEnv, Walker2DBulletEnv, HopperBulletEnv]
 env = Walker2DBulletEnv()
+env.update_power(foot_left=130.0, foot_right=1.0)
+env = HalfCheetahBulletEnv()
+env.update_power(ffoot=100, fshin=100, fthigh=100, bfoot=100, bshin=100, bthigh=100)
+env = AntBulletEnv()
+env.update_power(flfoot=100, frfoot=100, lbfoot=100, rbfoot=100)
+env = HopperBulletEnv()
+env.update_power(foot=100)
 
 
 state = env.reset()

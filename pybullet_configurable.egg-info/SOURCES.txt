@@ -1,0 +1,6 @@
+setup.py
+pybullet_configurable.egg-info/PKG-INFO
+pybullet_configurable.egg-info/SOURCES.txt
+pybullet_configurable.egg-info/dependency_links.txt
+pybullet_configurable.egg-info/not-zip-safe
+pybullet_configurable.egg-info/top_level.txt

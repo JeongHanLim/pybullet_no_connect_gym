@@ -5,7 +5,7 @@ from setuptools import find_packages, setup
 # Read in the README for the long description on PyPI
 
 setup(name='pybullet_configurable',
-      version='0.1',
+      version='0.2.1',
       description='pybullet configurable',
       long_description='pybullet',
       url='https://github.com/JeongHanLim/pybullet_no_connect_gym',
@@ -15,3 +15,5 @@ setup(name='pybullet_configurable',
           'Programming Language :: Python :: 3',
           ],
       zip_safe=False)
+
+#0.2.0 : 4 environment available.
