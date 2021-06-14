@@ -7,7 +7,7 @@ class Ant(WalkerBase):
     foot_list = ['front_left_foot', 'front_right_foot', 'left_back_foot', 'right_back_foot']
     joint_list = ["hip_1", "ankle_1", "hip_2", "ankle_2", "hip_3", "ankle_3", "hip_4", "ankle_4"]
 
-    def __init__(self,front_left_foot: float, front_right_foot: float, left_back_foot: float, right_back_foot: float):
+    def __init__(self,front_left_foot, front_right_foot, left_back_foot, right_back_foot):
         self.front_left_foot = front_left_foot
         self.front_right_foot = front_right_foot
         self.left_back_foot = left_back_foot
