@@ -125,9 +125,3 @@ class Walker2D(WalkerBase):
         for foot_right_joint in Walker2D.joint_foot_right:
             self.jdict[foot_right_joint].power_coef = self.foot_right
 
-    #debug
-    def print_power(self):
-        for i, data in enumerate(self.jdict.keys()):
-            print(self.jdict[data].power_coef, end='\t')
-        print()  # newline
-
