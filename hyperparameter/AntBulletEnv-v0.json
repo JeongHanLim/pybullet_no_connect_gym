@@ -1,10 +1,6 @@
 {
-  "hip_1": 100,
-  "ankle_1" : 100,
-  "hip_2": 100,
-  "ankle_2": 100,
-  "hip_3": 100,
-  "ankle_3": 100,
-  "hip_4": 100,
-  "ankle_4": 100
+  "front_left_foot" : 100,
+  "front_right_foot" : 100,
+  "left_back_foot": 100,
+  "right_back_foot": 100
 }

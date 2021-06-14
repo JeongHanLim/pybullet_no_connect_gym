@@ -7,7 +7,6 @@ def load_hyperparameters(env):
         hyperparmas = json.load(f)
     return hyperparmas
 
-
 # Test Code
 if __name__ == "__main__":
     env = "HalfCheetahPyBulletEnv"
