@@ -60,11 +60,10 @@ class HalfCheetah(WalkerBase):
 
 
 class Hopper(WalkerBase):
-    #foot_list = ["foot"]
+    foot_list = ["foot"]
     # joint_list = ["thigh_joint", "leg_joint", "foot_joint"]
     def __init__(self, **kwargs):
         self.hyperparameter = kwargs['hyper']
-        print(self.hyperparameter)
         WalkerBase.__init__(self, "hopper.xml", "torso", action_dim=3, obs_dim=15, power=0.75)
 
     def alive_bonus(self, z, pitch):

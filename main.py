@@ -12,9 +12,9 @@ env = HopperBulletEnv(hyper = hyperparam)
 env.render()
 ## DEFAULT_CODE ============================================
 
-# model = SAC(MlpPolicy, env, verbose=1)
-# model.learn(total_timesteps=30000, log_interval=1)
-# model.save("test")
+model = SAC(MlpPolicy, env, verbose=1)
+model.learn(total_timesteps=30000, log_interval=10)
+model.save("test")
 
 episode = 0
 rewards = []
@@ -30,7 +30,6 @@ for i in range(1000):
         reward_episode+=rw
         if done == True:
             rewards.append(reward_episode)
-            print(reward_episode)
             break
         hyperparam.update({}) #FIXME : SOMETHING HYPERPARAMETER HERE
         env.update_power(hyperparam)
